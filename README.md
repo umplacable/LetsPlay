@@ -1,2 +1,2 @@
 # LetsPlay
-An open source app made to select common steam games among people 
+An open source app made to show common steam games among peoples library
