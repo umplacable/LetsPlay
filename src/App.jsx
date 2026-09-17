@@ -1,17 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AppList } from "./assets/Apps/AppList";
 import AppCard from "./assets/Components/AppCard";
-import Navigator from "./assets/Components/Navigator";
 import heroImg from "./assets/hero.png";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "./assets/vite.svg";
+import { useLocation } from "react-router-dom";
 import "./App.css";
 
 function App() {
 
+    const location = useLocation();
+	
+	useEffect(() => {
+		if (location.pathname.slice(1) === "") {
+			document.title = "Steam Magician";
+		}
+
+		if (location.pathname.slice(1) !== "") {
+			const app = AppList.find((app) => app.name.replace(/<[^>]*>?/gm, "") === location.pathname.slice(1));
+			if (app) {
+				document.title = app.name.replace(/<[^>]*>?/gm, "");
+			}
+		}
+		
+	}, [location]);
+
 	return (
 		<>
-			<Navigator />
 			<section id="center">
 				<div className="hero">
 					<img src={heroImg} className="base" width="170" height="179" alt="" />

@@ -17,6 +17,28 @@
 	}
 }
 
+.navigation{
+	padding: 10px 20px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 18px;
+	color: var(--text-h);
+	margin-bottom: 24px;
+	border-bottom: 1px solid var(--border);
+	border-radius:0px 0px 8px 8px;
+
+	a {
+		text-decoration: none;
+		color: var(--text-h);
+		transition: color 0.3s;
+
+		&:hover {
+			color: var(--accent);
+		}
+	}
+}
+
 .hero {
 	position: relative;
 
@@ -188,12 +210,17 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 20px;
+	padding: 20px;
+	margin-bottom: 20px;
 }
 
 .app_card {
 
 	width: clamp(200px, 20vw, 300px);
 	height: auto;
+	
+	text-decoration: none;
+	color: white;
 
 	display: flex;
 	flex-direction: column;

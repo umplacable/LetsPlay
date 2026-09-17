@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 const AppCard = ({
 	app = {
 		name: "",
@@ -7,7 +9,7 @@ const AppCard = ({
 	},
 }) => {
 	return (
-		<div
+		<Link to={`/${app.name.replace(/<[^>]*>?/gm, "")}`}
 			className="app_card"
 			style={{ backgroundImage: `url(${app.image_bg})` }}
 		>
@@ -18,7 +20,7 @@ const AppCard = ({
 				<h3 dangerouslySetInnerHTML={{ __html: app.name }} />
 				<p>{app.description}</p>
 			</div>
-		</div>
+		</Link>
 	);
 };
 
