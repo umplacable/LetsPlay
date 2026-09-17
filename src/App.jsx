@@ -12,6 +12,9 @@ function App() {
     const location = useLocation();
 	
 	useEffect(() => {
+
+	
+
 		if (location.pathname.slice(1) === "") {
 			document.title = "Steam Magician";
 		}
@@ -29,9 +32,7 @@ function App() {
 		<>
 			<section id="center">
 				<div className="hero">
-					<img src={heroImg} className="base" width="170" height="179" alt="" />
-					<img src={reactLogo} className="framework" alt="React logo" />
-					<img src={viteLogo} className="vite" alt="Vite logo" />
+					<img src="./img/logo_Steam_magician-noBG.png" className="base" alt="" />
 				</div>
 				<div>
 					<h1>Steam Magician</h1>
