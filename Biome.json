@@ -1,9 +1,20 @@
 {
-	"linter": {
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "linter": {
 		"rules": {
 			"security": {
 				"noDangerouslySetInnerHtml": "Information"
 			}
 		}
-	}
+  },
+  "vcs": {
+	"enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  }
 }
