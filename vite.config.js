@@ -20,7 +20,6 @@ export default defineConfig((mode) => {
 					} else {
 						path = path.concat(`?key=${API_KEY}`);
 					}
-					console.log(path);
 					return path;
 				},
 				cors: false,
