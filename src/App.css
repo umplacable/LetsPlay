@@ -275,3 +275,46 @@
 		}
 	}
 }
+
+
+/* User caard */
+
+.user_card {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	border-radius: 10px;
+	border: 1px solid var(--border);
+	background-color: var(--card-bg);
+	box-shadow: var(--shadow);
+	gap: 10px;
+	
+
+	img {
+		width: auto;
+		height: 100%;
+		border-radius: 20%;
+	}
+
+	h3 {
+		width: 100%;
+
+		flex : 1;
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 10px;
+		text-align: center;
+		margin-top: 0px;
+	}
+
+	&.small {
+		height: 50px;
+		width: 200px;
+	}
+	&.large {
+		width: 300px;
+		height: 150px;
+	}
+}

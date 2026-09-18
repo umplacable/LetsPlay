@@ -14,8 +14,11 @@ const UserCard = ({
             <img src={user.avatarfull} alt={user.personaname} />
             <div className="user_content">
                 <h3>{user.personaname}</h3>
-                <p>SteamID: {user.steamid}</p>
-                <Link to={user.profileurl} target="_blank">View Profile</Link>
+                {size === "large" && 
+                <div className="user_details">
+                    <p>SteamID: {user.steamid}</p>
+                    <Link to={user.profileurl} target="_blank">View Profile</Link>
+                </div>}
             </div>
         </div>
 	);
